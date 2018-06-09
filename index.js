@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
   response.send('Hello World!')
 })
 
-app.get("/custommessagee/:message", function (request, response) {
+app.post("/custommessagee/:message", function (request, response) {
   var message = request.params.message;
   message = message.split('_').join(' ');
   var vresponse = new VoiceResponse();
